@@ -5,9 +5,42 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Blog</title>
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Zilla+Slab:wght@300;400;500&display=swap"
+      rel="stylesheet"
+    />
+
     <link rel="stylesheet" href="./blog-style.css">
 </head>
 <body>
     
+    <header>
+        <div class="logo"><img src="../logo.png" />
+            <div>
+                <a class="home-page" href="../index.html">Home Page</a>
+            </div>
+    </header>
+
+    <main>
+        <div class="blog">
+            <h1>What is the diffrents between <strong>local storage</strong> and <strong>Session storage</strong></h1>
+            <p>The difference is that with sessionStorage, the data is persisted only until the window or tab is closed. LocalStorage and sessionStorage are almost identical and have the same API. With localStorage, the data is persisted until the user manually clears the.Browser cache or until your web app clears the data.</p>
+        </div>
+    
+        <div class="blog">
+            <h1>What is the diffrents between <strong>global scope</strong> and <strong>local scope</strong></h1>
+            <p>Global variable has a global scope which means it can be defined anywhere.Local variable will be visible only within a function where it is defined.</p>
+        </div>
+        <div class="blog">
+            <h1>How does work javascript <strong>event loop</strong></h1>
+            <p>The event loop is the secret behind JavaScript's asynchronous programming. JS executes all operations on a single thread, but using a few smart data structures, it gives us the illusion of multi-threading.The Event Loop has one simple job to monitor the Call Stack and the Callback Queue or Message Queue. If the Call Stack is empty, it will take the first event from the Callback queue and will push it to the Call Stack, which effectively runs it. </p>
+        </div>
+        <div class="blog">
+            <h1>Way of get undefined in javascript</h1>
+            <p>There have some ways to get undefined. The main thing is taht - the undefined property indicates that a variable has not been assigned a value,or not declared at all.</p>
+        </div>
+    </main>
+
 </body>
 </html>
