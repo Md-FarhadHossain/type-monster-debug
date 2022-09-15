@@ -8,6 +8,9 @@ const modalBackground = document.getElementById("modal-background");
 // variables
 let userText = "";
 let errorCount = 0;
+
+console.log(errorCount)
+
 let startTime;
 let questionText = "";
 
@@ -35,17 +38,21 @@ const typeController = (e) => {
 
   // if it is not a valid character like Control/Alt then skip displaying anything
   if (!validLetters.includes(newLetter)) {
+
     return;
-  }
+  } 
 
   userText += newLetter;
 
+
   const newLetterCorrect = validate(newLetter);
+  
 
   if (newLetterCorrect) {
     display.innerHTML += `<span class="green">${newLetter === " " ? "▪" : newLetter}</span>`;
   } else {
     display.innerHTML += `<span class="red">${newLetter === " " ? "▪" : newLetter}</span>`;
+    errorCount++
   }
 
   // check if given question text is equal to user typed text
@@ -89,10 +96,10 @@ const gameOver = () => {
 
   // restart everything
   startTime = null;
-  errorCount = 0;
+  errorCount = 0
   userText = "";
   display.classList.add("inactive");
-};
+}
 
 const closeModal = () => {
   modalBackground.classList.toggle("hidden");
