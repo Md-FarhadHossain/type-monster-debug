@@ -80,7 +80,10 @@ body {
   color: white;
   margin: 10px 0;
 }
-
+.blog-link {
+  color: #9dffad;
+  font-size: 2rem;
+}
 .green {
   color: #9dffad;
 }
