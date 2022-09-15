@@ -141,16 +141,18 @@ button {
   cursor: pointer;
 }
 div#histories > .card {
-  width: 21.5rem;
   display: flex;
   flex-direction: column;
   text-align: center;
   line-height: 25px;
+  flex-grow: 1;
+  margin: .4rem;
+
 }
 #histories {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
+ display: grid;
+ grid-template-columns: repeat(3, minmax(0, 1fr));
+ gap: 1rem;
 }
 
 .card {
@@ -194,5 +196,9 @@ div#histories > .card {
   }
   .card {
     flex-direction: column;
+  }
+  div#histories {
+    place-items: center;
+    grid-template-columns: repeat(1, minmax(0, 1fr));
   }
 }
